@@ -2,7 +2,6 @@
 var should = require('should');
 var utils = require('./utils');
 var Program = require('../program');
-var fakeProgarm;
 
 describe('ProgramModel', function() {
 
