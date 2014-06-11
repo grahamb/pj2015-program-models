@@ -20,7 +20,7 @@ describe('UnitLeaderModel', function() {
             UnitLeader.create(mockLeader, function(err, unitLeader) {
                 should.not.exist(err);
                 unitLeader.name.should.equal('Mike Budzik');
-                unitLeader.unitNumber.should.be.type(String);
+                unitLeader.unitNumber.should.be.type('string');
                 done();
             });
         });
