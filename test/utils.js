@@ -6,29 +6,27 @@ var mongoose = require('mongoose');
 // this is helpful when you would like to change behavior when testing
 process.env.NODE_ENV = 'test';
 
-beforeEach(function (done) {
-
-    function clearDB() {
-        for (var i in mongoose.connection.collections) {
-            mongoose.connection.collections[i].remove(function() {});
-        }
-        return done();
-    }
-
+before(function(done) {
+    console.log('connecting');
     if (mongoose.connection.readyState === 0) {
         mongoose.connect('mongodb://localhost/pj-models-test', function (err) {
             if (err) {
                 throw err;
             }
-            return clearDB();
+            return done();
         });
-    } else {
-        return clearDB();
     }
-
 });
 
-afterEach(function (done) {
+// beforeEach(function (done) {
+
+//     console.log('beforeEach');
+
+
+// });
+
+after(function (done) {
+    console.log('after');
     mongoose.disconnect();
     return done();
 });
