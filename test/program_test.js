@@ -31,6 +31,14 @@ describe('ProgramModel', function() {
             });
         });
 
+        it('should not allow a duplicate name', function(done) {
+            Program.create(fakeProgram, function(err, program) {
+                should.exist(err);
+                err.name.should.equal('ValidationError');
+                done();
+            });
+        });
+
         it('should not save without a name', function(done) {
             var program = new Program(fakeProgram);
             program.name = '';
