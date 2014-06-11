@@ -34,7 +34,7 @@ describe('ProgramModel', function() {
         it('should not allow a duplicate name', function(done) {
             Program.create(fakeProgram, function(err, program) {
                 should.exist(err);
-                err.name.should.equal('ValidationError');
+                err.err.indexOf('duplicate key error').should.be.above(0);
                 done();
             });
         });
