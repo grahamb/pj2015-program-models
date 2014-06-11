@@ -1,8 +1,9 @@
+'use strict'
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ProgramSchema = new Schema({
-    name: { type: String, required: true },
+    name: { type: String, required: true, unique: true },
     description: { type: String, required: true },
     location: { type: String, enum: ['onsite', 'offsite'], required: true },
     programPeriodsAvailable: {type: Number, required: true },
