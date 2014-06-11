@@ -19,6 +19,10 @@ describe('ProgramModel', function() {
     };
 
     describe('#create()', function() {
+        before(function(done) {
+            Program.remove(done);
+        });
+
         it('should create a new Program', function(done) {
             Program.create(fakeProgram, function(err, program) {
                 should.not.exist(err);
