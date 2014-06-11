@@ -3,10 +3,7 @@ var utils = require('./utils');
 var Program = require('../program');
 var fakeProgarm;
 
-
 'use strict';
-
-
 
 describe('ProgramModel', function() {
 
