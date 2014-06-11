@@ -31,6 +31,14 @@ describe('ProgramModel', function() {
             });
         });
 
+        it('should find the Program', function(done) {
+            Program.findOne({name: 'Discover SCUBA'}, function(err, program) {
+                should.not.exist(err);
+                program.name.should.equal('Discover SCUBA');
+                done();
+            });
+        })
+
         it('should not allow a duplicate name', function(done) {
             Program.create(fakeProgram, function(err, program) {
                 should.exist(err);
