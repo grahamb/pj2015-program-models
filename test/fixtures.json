@@ -1,0 +1,31 @@
+{
+    "mockUnit": {
+        "unitId": "123",
+        "unitName": "12th New Westminster Falcon Patrol",
+        "unitLeaders": [
+            { "name": "Mike Budzik", "emailAddress": "mikebudzik@newwestscouts.ca" },
+            { "name": "Geoff Pinkerton", "emailAddress": "geoff@newwestscouts.ca" }
+        ],
+        "numberOfScouts": 8,
+        "numberOfLeaders": 2,
+        "finalPaymentReceivedDate": 1402383600000,
+        "finalPaymentReceived": true
+    },
+
+    "mockProgram": {
+        "name": "Discover SCUBA",
+        "description": "Participants will discover SCUBA diving",
+        "location": "offsite",
+        "programPeriodsAvailable": 5,
+        "maxParticipantsPerPeriod": 48,
+        "programPeriodsRequired": 2,
+        "fee": 0,
+        "isOvernight": false,
+        "specialRequirements": "Should be able to swim",
+        "programActivityLeader": [{
+            "name": "Jane Riddell",
+            "email": "jariddell99@gmail.com"
+        }]
+    }
+
+}
