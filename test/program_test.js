@@ -13,7 +13,12 @@ describe('ProgramModel', function() {
         maxParticipantsPerPeriod: 48,
         programPeriodsRequired: 2,
         fee: 0,
-        isOvernight: false
+        isOvernight: false,
+        specialRequirements: 'Should be able to swim',
+        programActivityLeader: [{
+            name: 'Jane Riddell',
+            email: 'jariddell99@gmail.com'
+        }]
     };
 
     describe('#create()', function() {
@@ -33,6 +38,7 @@ describe('ProgramModel', function() {
             Program.findOne({name: 'Discover SCUBA'}, function(err, program) {
                 should.not.exist(err);
                 program.name.should.equal('Discover SCUBA');
+                program.programActivityLeader[0].name.should.equal('Jane Riddell');
                 done();
             });
         })

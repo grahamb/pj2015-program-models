@@ -10,7 +10,12 @@ var ProgramSchema = new Schema({
     maxParticipantsPerPeriod: { type: Number, required: true },
     programPeriodsRequired: { type: Number, required: true },
     fee: { type: Number, default: 0 },
-    isOvernight: { type: Boolean, required: true }
+    isOvernight: { type: Boolean, required: true },
+    specialRequirements: { type: String },
+    programActivityLeader: [{
+        name: { type: String },
+        emailAddress: { type: String }
+    }]
 });
 
 mongoose.model('programs', ProgramSchema);
