@@ -7,7 +7,6 @@ var mongoose = require('mongoose');
 process.env.NODE_ENV = 'test';
 
 before(function(done) {
-    console.log('connecting');
     if (mongoose.connection.readyState === 0) {
         mongoose.connect('mongodb://localhost/pj-models-test', function (err) {
             if (err) {
@@ -18,15 +17,7 @@ before(function(done) {
     }
 });
 
-// beforeEach(function (done) {
-
-//     console.log('beforeEach');
-
-
-// });
-
 after(function (done) {
-    console.log('after');
     mongoose.disconnect();
     return done();
 });
