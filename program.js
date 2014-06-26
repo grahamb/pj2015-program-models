@@ -18,7 +18,5 @@ var ProgramSchema = new Schema({
     }]
 });
 
-mongoose.model('programs', ProgramSchema);
-var ProgramModel = mongoose.model('programs');
-
+var ProgramModel = mongoose.model('programs', ProgramSchema);
 module.exports = ProgramModel;
