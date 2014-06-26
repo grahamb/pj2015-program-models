@@ -2,32 +2,16 @@
 var should = require('should');
 var utils = require('./utils');
 var Program = require('../program');
+var fixtures = require('./fixtures');
 
 describe('ProgramModel', function() {
-
-    var fakeProgram = {
-        name: 'Discover SCUBA',
-        description: 'Participants will discover SCUBA diving',
-        location: 'offsite',
-        programPeriodsAvailable: 5,
-        maxParticipantsPerPeriod: 48,
-        programPeriodsRequired: 2,
-        fee: 0,
-        isOvernight: false,
-        specialRequirements: 'Should be able to swim',
-        programActivityLeader: [{
-            name: 'Jane Riddell',
-            email: 'jariddell99@gmail.com'
-        }]
-    };
-
     describe('#create()', function() {
         before(function(done) {
             Program.remove(done);
         });
 
         it('should create a new Program', function(done) {
-            Program.create(fakeProgram, function(err, program) {
+            Program.create(fixtures.mockProgram, function(err, program) {
                 should.not.exist(err);
                 program.name.should.equal('Discover SCUBA');
                 done();
@@ -44,7 +28,7 @@ describe('ProgramModel', function() {
         })
 
         it('should not allow a duplicate name', function(done) {
-            Program.create(fakeProgram, function(err, program) {
+            Program.create(fixtures.mockProgram, function(err, program) {
                 should.exist(err);
                 err.err.indexOf('duplicate key error').should.be.above(0);
                 done();
@@ -52,7 +36,7 @@ describe('ProgramModel', function() {
         });
 
         it('should not save without a name', function(done) {
-            var program = new Program(fakeProgram);
+            var program = new Program(fixtures.mockProgram);
             program.name = '';
             program.save(function(err, program) {
                 should.exist(err);
@@ -62,7 +46,7 @@ describe('ProgramModel', function() {
         });
 
         it('should not save with an invalid location', function(done) {
-            var program = new Program(fakeProgram);
+            var program = new Program(fixtures.mockProgram);
             program.location = 'somewhere else',
             program.save(function(err, program) {
                 should.exist(err);
