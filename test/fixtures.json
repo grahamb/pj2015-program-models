@@ -21,7 +21,7 @@
         "programPeriodsRequired": 2,
         "fee": 0,
         "isOvernight": false,
-        "specialRequirements": "Should be able to swim",
+        "knowledgeSkillsEquipment": "Should be able to swim",
         "programActivityLeader": [{
             "name": "Jane Riddell",
             "email": "jariddell99@gmail.com"
