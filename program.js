@@ -7,6 +7,7 @@ var ProgramSchema = new Schema({
     description: { type: String, required: true },
     fitnessLevel: { type: String, required: true, enum: ['average', 'good', 'high'], default: 'average' },
     prerequisites: { type: String, required: true, default: 'none' },
+    programClass: { type: String, required: true, default: 'b', enum: ['a', 'b'] },
     knowledgeSkillsEquipment: { type: String },
     location: { type: String, enum: ['onsite', 'offsite'], required: true },
     programPeriodsAvailable: {type: Number, required: true },

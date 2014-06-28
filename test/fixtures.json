@@ -16,6 +16,7 @@
         "name": "Discover SCUBA",
         "description": "Participants will discover SCUBA diving",
         "location": "offsite",
+        "programClass": "a",
         "programPeriodsAvailable": 5,
         "maxParticipantsPerPeriod": 48,
         "programPeriodsRequired": 2,
