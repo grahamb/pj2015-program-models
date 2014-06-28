@@ -14,7 +14,6 @@ var ProgramSchema = new Schema({
     programPeriodsRequired: { type: Number, required: true, min: 1, max: 3, default: 1 },
     fee: { type: Number, default: 0 },
     isOvernight: { type: Boolean, required: true },
-    specialRequirements: { type: String },
     programActivityLeader: [{
         name: { type: String },
         emailAddress: { type: String }
