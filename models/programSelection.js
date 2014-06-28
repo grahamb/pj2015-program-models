@@ -1,3 +1,7 @@
+/*
+TODO: need to add validator that checks to see if more than one "A" activity has been chosen
+ */
+
 'use strict';
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
