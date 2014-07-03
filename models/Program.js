@@ -14,11 +14,14 @@ var ProgramSchema = new Schema({
     maxParticipantsPerPeriod: { type: Number, required: true },
     programPeriodsRequired: { type: Number, required: true, min: 1, max: 3, default: 1 },
     fee: { type: Number, default: 0 },
-    isOvernight: { type: Boolean, required: true },
     programActivityLeader: [{
         name: { type: String },
         emailAddress: { type: String }
     }]
+});
+
+ProgramSchema.virtual('isOvernight').get(function() {
+    return this.programPeriodsRequired === 3 ? 'yes' : 'no';
 });
 
 var ProgramModel = mongoose.model('programs', ProgramSchema);

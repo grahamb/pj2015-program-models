@@ -25,7 +25,15 @@ describe('ProgramModel', function() {
                 program.programActivityLeader[0].name.should.equal('Jane Riddell');
                 done();
             });
-        })
+        });
+
+        it('should return the proper isOvernight value', function(done) {
+            Program.findOne({name: 'Discover SCUBA'}, function(err, program) {
+                should.not.exist(err);
+                program.isOvernight.should.equal('no');
+                done();
+            });
+        });
 
         it('should not allow a duplicate name', function(done) {
             Program.create(fixtures.mockProgram, function(err, program) {
