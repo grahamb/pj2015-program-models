@@ -1,7 +1,7 @@
 'use strict';
 var should = require('should');
 var utils = require('./utils');
-var ProgramSelection = require('../programSelection');
+var ProgramSelection = require('../models/programSelection');
 var fixtures = require('./fixtures');
 
 describe('ProgramSelectionModel', function() {

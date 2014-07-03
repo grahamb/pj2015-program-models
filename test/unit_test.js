@@ -1,7 +1,7 @@
 'use strict';
 var should = require('should');
 var utils = require('./utils');
-var Unit = require('../unit');
+var Unit = require('../models/unit');
 var fixtures = require('./fixtures');
 
 describe('UnitModel', function() {
