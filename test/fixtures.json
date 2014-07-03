@@ -21,7 +21,6 @@
         "maxParticipantsPerPeriod": 48,
         "programPeriodsRequired": 2,
         "fee": 0,
-        "isOvernight": false,
         "knowledgeSkillsEquipment": "Should be able to swim",
         "programActivityLeader": [{
             "name": "Jane Riddell",
