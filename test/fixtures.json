@@ -16,12 +16,12 @@
         "name": "Discover SCUBA",
         "description": "Participants will discover SCUBA diving",
         "location": "offsite",
-        "programClass": "a",
+        "programClass": "A",
         "programPeriodsAvailable": 5,
         "maxParticipantsPerPeriod": 48,
         "programPeriodsRequired": 2,
         "fee": 0,
-        "knowledgeSkillsEquipment": "Should be able to swim",
+        "knowledgeSkillsEquipment": ["Should be able to swim"],
         "programActivityLeader": [{
             "name": "Jane Riddell",
             "email": "jariddell99@gmail.com"
