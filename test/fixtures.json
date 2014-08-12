@@ -24,7 +24,7 @@
         "knowledgeSkillsEquipment": ["Should be able to swim"],
         "programActivityLeader": [{
             "name": "Jane Riddell",
-            "email": "jariddell99@gmail.com"
+            "emailAddress": "jariddell99@gmail.com"
         }]
     }
 
