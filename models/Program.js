@@ -5,6 +5,7 @@ var Schema = mongoose.Schema;
 var ProgramSchema = new Schema({
     name: { type: String, required: true, unique: true },
     description: { type: String, required: true },
+    shortDescription: { type: String },
     fitnessLevel: { type: String, required: true, enum: ['average', 'good', 'high'], default: 'average' },
     prerequisites: [{ type: String }],
     programClass: { type: String, required: true, default: 'B', enum: ['A', 'B'] },
