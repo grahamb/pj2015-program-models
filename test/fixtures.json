@@ -19,10 +19,19 @@
         "location": "offsite",
         "programClass": "A",
         "programPeriodsAvailable": 5,
-        "maxParticipantsPerPeriod": 48,
+        "maxParticipantsPerPeriod": 50,
         "programPeriodsRequired": 2,
         "fee": 0,
-        "knowledgeSkillsEquipment": ["Should be able to swim"],
+        "prerequisites": [
+            "Must have Swimming Badge or be able to swim 200 metres (any style, not timed)",
+            "Signed and correctly completed PADI/Scouts Canada release form",
+            "Correctly completed and signed PADI Health Form (doctor's note required if answered 'Yes' to any question)"
+        ],
+        "knowledgeSkillsEquipment": [
+            "Swim suit (wear under clothing, arrive in your swim suit)",
+            "A clean T-shirt to wear in the pool (it will get wet)",
+            "Towel"
+        ],
         "programActivityLeader": [{
             "name": "Jane Riddell",
             "emailAddress": "jariddell99@gmail.com"
