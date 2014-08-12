@@ -6,6 +6,7 @@
   "scripts": {
     "test": "mocha"
   },
+  "repository": "https://github.com/grahamb/pj2015-program-models.git",
   "author": "Graham Ballantyne <hello@grahamballantyne.com>",
   "license": "ISC",
   "dependencies": {
