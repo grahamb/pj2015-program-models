@@ -27,6 +27,15 @@ describe('ProgramModel', function() {
             });
         });
 
+        it('should find the Program by its slug', function(done) {
+            Program.findOne({slug: 'discover-scuba'}, function(err, program) {
+                should.not.exist(err);
+                program.name.should.equal('Discover SCUBA');
+                program.programActivityLeader[0].name.should.equal('Jane Riddell');
+                done();
+            });
+        });
+
         it('should return the proper isOvernight value', function(done) {
             Program.findOne({name: 'Discover SCUBA'}, function(err, program) {
                 should.not.exist(err);

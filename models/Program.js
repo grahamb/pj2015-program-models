@@ -1,9 +1,11 @@
 'use strict';
+var slug = require('slug');
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var ProgramSchema = new Schema({
     name: { type: String, required: true, unique: true },
+    slug: { type: String, unique: true },
     description: { type: String, required: true },
     shortDescription: { type: String },
     fitnessLevel: { type: String, required: true, enum: ['average', 'good', 'high'], default: 'average' },
@@ -23,6 +25,11 @@ var ProgramSchema = new Schema({
 
 ProgramSchema.virtual('isOvernight').get(function() {
     return this.programPeriodsRequired === 3 ? 'yes' : 'no';
+});
+
+ProgramSchema.pre('save', function(next) {
+    this.slug = slug(this.name).toLowerCase();
+    next();
 });
 
 var ProgramModel = mongoose.model('programs', ProgramSchema);
