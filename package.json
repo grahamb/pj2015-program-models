@@ -1,6 +1,6 @@
 {
   "name": "pj-program-models",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Models for PJ Program Scheduling",
   "main": "index.js",
   "scripts": {
