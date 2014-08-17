@@ -20,7 +20,7 @@
         "programClass": "A",
         "programPeriodsAvailable": 5,
         "maxParticipantsPerPeriod": 50,
-        "programPeriodsRequired": 2,
+        "programPeriodsRequired": 1,
         "fee": 0,
         "prerequisites": [
             "Must have Swimming Badge or be able to swim 200 metres (any style, not timed)",

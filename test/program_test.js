@@ -44,6 +44,14 @@ describe('ProgramModel', function() {
             });
         });
 
+        it('should return the proper programDuration value', function(done) {
+            Program.findOne({name: 'Discover SCUBA'}, function(err, program) {
+                should.not.exist(err);
+                program.programDuration.should.equal('Half-Day');
+                done();
+            });
+        });
+
         it('should not allow a duplicate name', function(done) {
             Program.create(fixtures.mockProgram, function(err, program) {
                 should.exist(err);

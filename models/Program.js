@@ -27,6 +27,20 @@ ProgramSchema.virtual('isOvernight').get(function() {
     return this.programPeriodsRequired === 3 ? 'yes' : 'no';
 });
 
+ProgramSchema.virtual('programDuration').get(function() {
+    switch (this.programPeriodsRequired) {
+        case 1:
+            return "Half-Day";
+            break;
+        case 2:
+            return "Full-Day";
+            break;
+        case 3:
+            return "Overnight";
+            break;
+    }
+});
+
 ProgramSchema.pre('save', function(next) {
     this.slug = slug(this.name).toLowerCase();
     next();
