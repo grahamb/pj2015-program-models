@@ -17,7 +17,7 @@
         "shortDescription": "Below the surface, the adventure begins!  Come get wet & breathe underwater.  Have a SCUBA diving lesson and earn your Troop Specialty badge in the process.",
         "description": "Below the surface, the Adventure begins!  Come get wet & breath underwater.  Have a Scuba diving lesson and earn your Troop Specialty badge in the process. Learn basic skills like breathing, how to toss a Frisbee underwater, mask partial-flood & clearing, regulator removal & replacement, breathing from an alternative source, as well asÉ secret hand signals!",
         "location": "offsite",
-        "programClass": "A",
+        "premiumActivity": true,
         "programPeriodsAvailable": 5,
         "maxParticipantsPerPeriod": 50,
         "programPeriodsRequired": 1,

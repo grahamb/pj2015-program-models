@@ -10,7 +10,7 @@ var ProgramSchema = new Schema({
     shortDescription: { type: String },
     fitnessLevel: { type: String, required: true, enum: ['average', 'good', 'high'], default: 'average' },
     prerequisites: [{ type: String }],
-    programClass: { type: String, required: true, default: 'B', enum: ['A', 'B'] },
+    premiumActivity: { type: Boolean, required: true, default: false },
     knowledgeSkillsEquipment: [{ type: String }],
     location: { type: String, enum: ['onsite', 'offsite'], required: true },
     programPeriodsAvailable: {type: Number, required: true },

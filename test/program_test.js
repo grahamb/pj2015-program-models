@@ -52,6 +52,14 @@ describe('ProgramModel', function() {
             });
         });
 
+        it('should return the proper premiumActivity type and value', function(done) {
+            Program.findOne({name: 'Discover SCUBA'}, function(err, program) {
+                program.premiumActivity.should.be.type('boolean');
+                program.premiumActivity.should.be.true;
+                done();
+            });
+        });
+
         it('should not allow a duplicate name', function(done) {
             Program.create(fixtures.mockProgram, function(err, program) {
                 should.exist(err);
